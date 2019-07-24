@@ -28,3 +28,13 @@ pipeline {
         }
     }
 }
+        stage('Fortify Scan'){
+            steps {
+                fodStaticAssessment bsiToken: 'eyJ0ZW5hbnRJZCI6MTg5NiwidGVuYW50Q29kZSI6IlNJMSIsInJlbGVhc2VJZCI6MjEyODE0LCJwYXlsb2FkVHlwZSI6IkFOQUxZU0lTX1BBWUxPQUQiLCJhc3Nlc3NtZW50VHlwZUlkIjoyNzQsInRlY2hub2xvZ3lUeXBlIjoiSlMvVFMvSFRNTCIsInRlY2hub2xvZ3lUeXBlSWQiOjE2LCJ0ZWNobm9sb2d5VmVyc2lvbiI6bnVsbCwidGVjaG5vbG9neVZlcnNpb25JZCI6bnVsbCwiYXVkaXRQcmVmZXJlbmNlIjoiQXV0b21hdGVkIiwiYXVkaXRQcmVmZXJlbmNlSWQiOjIsImluY2x1ZGVUaGlyZFBhcnR5IjpmYWxzZSwiaW5jbHVkZU9wZW5Tb3VyY2VBbmFseXNpcyI6ZmFsc2UsInBvcnRhbFVyaSI6Imh0dHBzOi8vYW1zLmZvcnRpZnkuY29tIiwiYXBpVXJpIjoiaHR0cHM6Ly9hcGkuYW1zLmZvcnRpZnkuY29tIiwic2NhblByZWZlcmVuY2UiOiJTdGFuZGFyZCIsInNjYW5QcmVmZXJlbmNlSWQiOjF9', 
+                entitlementPreference: 2, 
+                overrideGlobalConfig: true, 
+                personalAccessToken:'OSRaYnA-aFgod2lzTHdlanZQYzlqb3NpWjBvMDJh0' 
+                tenantId: 'SI1', 
+                username: 't.stark'
+            }
+        }
